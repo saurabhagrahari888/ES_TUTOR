@@ -2,13 +2,12 @@
     Layout = "_Layout";
 }
 @model ES_TUTOR.Models.StudentRegisterationDetails
-<h1>Student Login Details</h1>
+<h4>Student Registeration Page</h4>
 <hr />
-@using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "elementEditForm", @class = "form-horizontal form-label-left" }))
+@using (Html.BeginForm("StudentRegistration", "Registeration", FormMethod.Post, new { @id = "elementEditForm", @class = "form-horizontal form-label-left" }))
 {
-    <div class="row">
+    <div class="row form-control">
         <div class="col-md-4">
-            <form asp-action="Login" asp-controller="Login">
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="editor-label">
                     @Html.LabelFor(model => model.Name)
@@ -89,9 +88,8 @@
                     @Html.ValidationMessageFor(model => model.IsRole)
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Login" class="btn btn-primary" />
+                    <input type="submit" value="Register" class="btn btn-primary" />
                 </div>
-            </form>
         </div>
     </div>
 }
