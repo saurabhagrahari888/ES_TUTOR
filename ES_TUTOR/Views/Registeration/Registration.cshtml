@@ -1,0 +1,97 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model ES_TUTOR.Models.StudentRegisterationDetails
+<h1>Student Login Details</h1>
+<hr />
+@using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "elementEditForm", @class = "form-horizontal form-label-left" }))
+{
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Login" asp-controller="Login">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Email)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Address)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Address)
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.City)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.City)
+                    @Html.ValidationMessageFor(model => model.City)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.State)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.State)
+                    @Html.ValidationMessageFor(model => model.State)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.DOB)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.DOB)
+                    @Html.ValidationMessageFor(model => model.DOB)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Mobile)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Mobile)
+                    @Html.ValidationMessageFor(model => model.Mobile)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.CoreSubject)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.CoreSubject)
+                    @Html.ValidationMessageFor(model => model.CoreSubject)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.StudentMedium)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.StudentMedium)
+                    @Html.ValidationMessageFor(model => model.StudentMedium)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.State)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.State)
+                    @Html.ValidationMessageFor(model => model.State)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.IsRole)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.IsRole)
+                    @Html.ValidationMessageFor(model => model.IsRole)
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+}
